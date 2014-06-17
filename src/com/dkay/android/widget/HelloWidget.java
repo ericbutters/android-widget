@@ -24,8 +24,10 @@ public class HelloWidget extends AppWidgetProvider {
 	
 	@Override
 	public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+		
 		Timer timer = new Timer();
 		timer.scheduleAtFixedRate(new MyTime(context, appWidgetManager), 1, 1000);
+		
 	}
 	
 	private class MyTime extends TimerTask {
@@ -53,7 +55,7 @@ public class HelloWidget extends AppWidgetProvider {
         paint.setColor(Color.TRANSPARENT);
         canvas.drawPaint(paint);
         // Use Color.parseColor to define HTML colors
-        paint.setColor(Color.parseColor("#66DDEE"));
+        paint.setColor(Color.parseColor("#FF0000"));
         paint.setFlags(Paint.ANTI_ALIAS_FLAG);
         canvas.drawCircle(x / 2, y / 2, radius, paint);
         
